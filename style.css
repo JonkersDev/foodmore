@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100vw;
+  scroll-behavior: smooth;
+  background-color: #f3f3f3;
+}
+
+body .overflow-container {
+  overflow-x: hidden;
+}
+
+body .intro {
+  position: fixed;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(30deg, #ff8484, #ff3434);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+body .intro p {
+  width: 90%;
+  max-width: 300px;
+  color: white;
+}
+
+body .intro img {
+  width: 200px;
+}
+
+body .intro .continue {
+  padding: 5px 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: #ff3434;
+  cursor: pointer;
+  outline: none;
+}
+
+body header {
+  padding: 10px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body header .back-img {
+  z-index: -2 !important;
+}
+
+body header .background {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8484), to(rgba(255, 52, 52, 0.7)));
+  background-image: linear-gradient(180deg, #ff8484, rgba(255, 52, 52, 0.7));
+  z-index: -1;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -5vw;
+  width: 200vw;
+  height: 200vw;
+  max-height: 800px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+body header .logo {
+  width: 200px;
+}
+
+body .search-container {
+  position: relative;
+  background-color: white;
+  width: 95vw;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+          box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+body .search-container .search-text {
+  text-align: center;
+  color: gray;
+}
+
+body .search-container #search-bar {
+  display: block;
+  margin: 10px auto;
+  border: 2px solid #ff3434;
+  padding: 10px;
+  padding-left: 35px;
+  border-radius: 10px;
+  width: 80%;
+  outline: none;
+  -webkit-box-shadow: 4px 4px 30px gray;
+          box-shadow: 4px 4px 30px gray;
+  opacity: 0.6;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+body .search-container #search-bar:focus {
+  opacity: 1;
+}
+
+body .search-container label {
+  position: absolute;
+  left: 10%;
+  padding-left: 30px;
+  top: 60px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  opacity: 0.4;
+}
+
+body .bar {
+  width: 30vw;
+  max-width: 100px;
+  display: block;
+  margin: auto;
+}
+
+body h2 {
+  font-family: "magneto", sans-serif;
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+  text-shadow: 0 0 4px #ff3434;
+  font-size: 19pt;
+}
+
+body .random-container,
+body .result-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100vw;
+  text-align: center;
+  padding: 10px 0;
+}
+
+body .random-container .no-result,
+body .result-container .no-result {
+  padding: 30px;
+  color: #ffdcdc;
+  text-shadow: 0 0 4px #ff3434;
+}
+
+body .recipe-card {
+  width: 300px;
+  height: 450px;
+  border-radius: 20px;
+  margin: 3% 2%;
+  position: relative;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 8px lightgray;
+          box-shadow: 0px 0px 8px lightgray;
+  overflow: hidden;
+  color: gray;
+  cursor: pointer;
+}
+
+body .recipe-card::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -250px;
+  right: -20px;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 52, 52, 0.2)), to(rgba(255, 132, 132, 0.2)));
+  background-image: linear-gradient(rgba(255, 52, 52, 0.2), rgba(255, 132, 132, 0.2));
+}
+
+body .recipe-card img {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: -250px;
+  right: -20px;
+  border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body .recipe-card .card-info {
+  margin-top: 250px;
+  padding: 10px 20px;
+  height: 150px;
+  line-height: 20px;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .recipe-card .card-info h4 {
+  font-family: "magneto", sans-serif;
+  color: black;
+}
+
+body .recipe-card .card-info .area {
+  font-size: 8pt;
+}
+
+body .recipe-card .card-info i {
+  color: #ff3434;
+}
+
+body .recipe-card button {
+  padding: 10px 50px;
+  border-radius: 10px;
+  border: 2px solid #ff3434;
+  background-color: white;
+  color: #ff3434;
+  outline: none;
+}
+
+body .recipe-card button:hover {
+  padding: 12px 52px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8484), to(#ff3434));
+  background-image: linear-gradient(90deg, #ff8484, #ff3434);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+body .recipe-container .modal {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+
+body .recipe-container .modal .recipe-full {
+  position: relative;
+  margin: auto;
+  padding-bottom: 20px;
+  background-color: white;
+  border-radius: 20px;
+  width: 700px;
+  max-width: 100vw;
+}
+
+body .recipe-container .modal .recipe-full .thumb {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .recipe-container .modal .recipe-full .close-full {
+  font-size: 20pt;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: #ff3434;
+  text-shadow: 0 0 4px white;
+  cursor: pointer;
+}
+
+body .recipe-container .modal .recipe-full .info {
+  text-align: center;
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  top: -80px;
+  padding: 30px;
+  width: 100%;
+}
+
+body .recipe-container .modal .recipe-full .info .btns {
+  position: relative;
+  -webkit-box-shadow: 0 0 2px lightgray;
+          box-shadow: 0 0 2px lightgray;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px auto;
+  width: 220px;
+}
+
+body .recipe-container .modal .recipe-full .info .btns button {
+  position: relative;
+  z-index: 1;
+  width: 50%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+body .recipe-container .modal .recipe-full .info .btns .active {
+  color: white;
+}
+
+body .recipe-container .modal .recipe-full .info .btns .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8484), to(#ff3434));
+  background-image: linear-gradient(90deg, #ff8484, #ff3434);
+  border-radius: 10px;
+  height: 100%;
+  width: 50%;
+  border-radius: 10px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+body .recipe-container .modal .recipe-full .info .ingredient-list {
+  display: none;
+  line-height: 30px;
+}
+
+body .recipe-container .modal .recipe-full .info .ingredient-list .dot {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8484), to(#ff3434));
+  background-image: linear-gradient(90deg, #ff8484, #ff3434);
+  display: inline-block;
+  border-radius: 5px;
+  margin: 2px;
+  width: 5px;
+  height: 5px;
+}
+
+body .recipe-container .modal .recipe-full .info .instructions {
+  padding: 10px;
+  display: none;
+}
+
+body .recipe-container .modal .recipe-full .info .active {
+  display: block;
+}
+
+body .recipe-container .modal .recipe-full a {
+  -webkit-box-shadow: 0 0 2px lightgrey;
+          box-shadow: 0 0 2px lightgrey;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8484), to(#ff3434));
+  background-image: linear-gradient(90deg, #ff8484, #ff3434);
+  width: 200px;
+  padding: 10px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+body footer {
+  border-top: 10px solid #ff3434;
+  width: 100vw;
+  padding: 10px 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #585858;
+}
+
+body footer h2 {
+  text-shadow: none;
+}
+
+body footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body footer i {
+  color: #ff3434;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  font-size: 20pt;
+  border-radius: 50%;
+  margin: 8px;
+  text-align: center;
+  padding-top: 28px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
